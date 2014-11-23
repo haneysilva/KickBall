@@ -1,0 +1,10 @@
+package br.haneysilva.kickball;
+
+import android.graphics.Canvas;
+import android.view.SurfaceView;
+
+public abstract class GameController extends SurfaceView implements Runnable {
+
+	public abstract void stepObjects(Canvas canvas);
+	public abstract void drawObjects(Canvas canvas);	
+}

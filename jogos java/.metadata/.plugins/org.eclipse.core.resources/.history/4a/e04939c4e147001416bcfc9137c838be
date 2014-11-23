@@ -1,0 +1,12 @@
+package br.haneysilva.kickball;
+
+import android.graphics.Canvas;
+
+public abstract class GameObject {
+
+	protected int altura, largura, x, y;
+	
+	public abstract void step(Canvas canvas);
+	public abstract void draw(Canvas canvas);
+	
+}

@@ -1,0 +1,9 @@
+package br.haneysilva.kickball;
+
+public abstract class GameObject {
+
+	protected int x, y, altura, largura;
+	
+	public abstract void step();
+	
+}

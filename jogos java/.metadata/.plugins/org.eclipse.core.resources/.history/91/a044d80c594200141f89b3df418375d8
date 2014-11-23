@@ -1,0 +1,9 @@
+package br.haneysilva.kickball;
+
+import android.graphics.Canvas;
+
+public interface GameController {
+
+	public void stepObjects(Canvas canvas);
+	public void drawObjects(Canvas canvas);	
+}

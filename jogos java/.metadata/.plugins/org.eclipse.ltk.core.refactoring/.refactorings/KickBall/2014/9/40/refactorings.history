@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;KickBall/res/drawable-mdpi/Sem título-1.png&apos; to &apos;bola.png&apos;" description="Rename resource &apos;Sem título-1.png&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="res/drawable-mdpi/Sem título-1.png" name="bola.png" stamp="1411998965746" updateReferences="true"/>
+</session>

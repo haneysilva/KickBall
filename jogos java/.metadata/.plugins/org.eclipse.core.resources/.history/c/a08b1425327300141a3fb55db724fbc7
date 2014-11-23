@@ -1,0 +1,40 @@
+package br.haneysilva.kickball;
+
+import android.graphics.Canvas;
+import android.graphics.Rect;
+
+public class Colisao {
+
+	public Colisao() {
+		
+	}
+	
+	//esse não está dando certo
+	
+	public static boolean verificarColisao (Bola bola, Bola bola2) {
+		
+		float xB1 = bola.get;
+		float xB2 = bola2.getX();
+		
+		float yB1 = bola.getY();
+		float yB2 = bola2.getY();
+		
+		if ((xB2 >= xB1 && xB2 <= (xB1 + bola.getWidth())) && (yB2 + bola2.getHeight() >= yB1 && yB2 + bola2.getHeight() <= (yB1 + bola.getHeight()))) {
+			return true;
+		}
+		
+		if ((xB2 >= xB1 && xB2 <= (xB1 + bola.getWidth())) && (yB2 >= yB1 && yB2 <= (yB1 + bola.getHeight()))) {
+			return true;
+		}
+		
+		if ((xB2 + bola2.getWidth() >= xB1 && xB2 + bola2.getWidth() <= (xB1 + bola.getWidth())) && (yB2 + bola2.getHeight() >= yB1 && yB2 + bola2.getHeight() <= (yB1 + bola.getHeight()))) {
+			return true;
+		}
+		
+		if ((xB2 + bola2.getHeight() >= xB1 && xB2 + bola2.getHeight() <= (xB1 + bola.getWidth())) && (yB2 >= yB1 && yB2 <= (yB1 + bola.getHeight()))) {
+			return true;
+		}
+		
+		return false;
+	}		
+}

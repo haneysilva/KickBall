@@ -1,0 +1,9 @@
+INDEX VERSION 1.126+C:\Users\Haney\Desktop\JAVA\jogos java\.metadata\.plugins\org.eclipse.jdt.core
+1933996981.index
+3492842496.index
+1620795728.index
+1284074322.index
+2781460269.index
+863638226.index
+2372956816.index
+3664855842.index

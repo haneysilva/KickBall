@@ -1,0 +1,41 @@
+package br.haneysilva.kickball;
+
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+
+public class Bola extends GameObject {
+
+	Paint paint = new Paint();
+	
+	private int passoX = 2, passoY = 2;
+	
+	public Bola() {
+	
+		x = 20;
+		y = 20;
+		altura = 20;
+		largura = 20;
+	}
+
+	@Override
+	public void step(Canvas canvas) {
+
+		if(x >= (canvas.getWidth() - 20) || x <= 20)
+			passoX = passoX * (-1);
+		
+		if(y <= (canvas.getHeight() - 20) || y >= 0)
+			passoY = passoY * (-1);
+		
+		x = x + passoX;
+		y = x + passoY;
+	}
+
+	@Override
+	public void draw(Canvas canvas) {
+
+		paint.setColor(Color.MAGENTA);
+		canvas.drawCircle(x, y, largura, paint);
+	}
+
+}

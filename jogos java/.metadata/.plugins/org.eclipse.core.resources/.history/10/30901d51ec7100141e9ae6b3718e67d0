@@ -1,0 +1,68 @@
+package br.haneysilva.kickball;
+
+import android.content.Context;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.view.MotionEvent;
+
+public class KickController extends GameController {
+
+	/* Objetos do Jogo*/
+	
+	Bola bola;
+	Bola bola2;
+	Fundo fundo;
+	
+	public KickController(Context context) {
+		super(context);
+	
+		bola = new Bola(context, 5, 5);
+		bola2 = new Bola(context, 500, 500);
+		bola2.inverteX();
+		bola2.inverteY();
+		fundo = new Fundo(context);
+	}
+
+	@Override
+	public void stepObjects(Canvas canvas) {
+
+		//posiciona
+		bola.step(canvas);
+		bola2.step(canvas);
+		
+		//verifica
+		//verificarColisao();
+		
+	}
+
+	@Override
+	public void drawObjects(Canvas canvas) {
+
+		fundo.draw(canvas);
+		//bola.draw(canvas);
+		bola2.draw(canvas);
+	}
+
+	
+	public boolean onTouchEvent(MotionEvent event) {
+	
+		bola.onTouchEvent(event);
+		bola2.onTouchEvent(event);
+		return super.onTouchEvent(event);
+	}	
+	
+	public void verificarColisao () {
+		
+		float xB1 = bola.getX();
+		float xB2 = bola2.getX();
+		
+		float yB1 = bola.getY();
+		float yB2 = bola2.getY();
+		
+		if ((xB2 >= xB1 && xB2 <= (xB1 + bola.getLargura())) && (yB2 >= yB1 && yB2 <= (yB1 + bola.getAltura())) ) {
+			
+			bola.inverteY();
+			bola2.inverteY();			
+		}		
+	}
+}

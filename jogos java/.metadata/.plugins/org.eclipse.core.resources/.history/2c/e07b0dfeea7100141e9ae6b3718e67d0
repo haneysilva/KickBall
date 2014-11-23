@@ -1,0 +1,88 @@
+package br.haneysilva.kickball;
+
+import android.R.integer;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.view.MotionEvent;
+
+public class Bola extends GameObject {
+
+	Paint paint = new Paint();
+	Bitmap imagem;
+	
+	private int passoX = 4, passoY = 4;
+	
+	public Bola(Context context, int x, int y) {
+		super(context);
+		
+		imagem = BitmapFactory.decodeResource(getResources(), R.drawable.bola);
+		altura = imagem.getHeight();
+		largura = imagem.getWidth();
+		this.x = (float) x;
+		this.y = (float) y;
+	}
+
+	@Override
+	public void step(Canvas canvas) {
+
+		if(x >= (canvas.getWidth() - largura) || x <= 1)
+			passoX = passoX * (-1);
+		
+		if(y >= (canvas.getHeight() - altura) || y <= 1)
+			passoY = passoY * (-1);
+		
+		x = x + passoX;
+		y = y + passoY;
+	}
+
+	@Override
+	public void draw(Canvas canvas) {
+
+		canvas.drawBitmap(imagem, x, y, null);
+	}
+	
+	public void inverteY () {
+		
+		passoY = passoY * (-1);
+	}
+	
+	public void inverteX () {
+		
+		passoX = passoX * (-1);
+	}
+
+	@Override
+	public boolean onTouchEvent(MotionEvent event) {
+
+		float xEvent = event.getX();
+		float yEvent = event.getY();
+		
+		float xBottom = x + largura;
+		float yBottom = y + altura;
+		
+		if((xEvent >= x && xEvent <= xBottom) && (yEvent >= y && yEvent <= yBottom)){
+			
+			inverteY();
+			return true;
+		} else return false;
+	}
+	
+	public void verificarColisao (Bola bola, Bola bola2) {
+		
+		float xB1 = bola.getX();
+		float xB2 = bola2.getX();
+		
+		float yB1 = bola.getY();
+		float yB2 = bola2.getY();
+		
+		if ((xB2 >= xB1 && xB2 <= (xB1 + bola.largura)) && (yB2 >= yB1 && yB2 <= (yB1 + bola.altura)) ) {
+			
+			bola.inverteY();
+			bola2.inverteY();			
+		}
+		
+	}
+}

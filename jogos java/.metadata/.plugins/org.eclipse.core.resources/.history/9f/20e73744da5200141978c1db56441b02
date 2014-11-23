@@ -1,0 +1,103 @@
+package br.haneysilva.kickball;
+
+import android.R.integer;
+import android.content.Context;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.view.MotionEvent;
+
+public class Bola extends GameObject {
+
+	Paint paint = new Paint();
+	
+	private int passoX = 4, passoY = 4;
+	
+	public Bola(Context context) {
+		super(context);
+		
+		altura = 31;
+		largura = 31;
+		x = largura;
+		y = altura;
+	}
+
+	@Override
+	public void step(Canvas canvas) {
+
+		if(x >= (canvas.getWidth() - largura) || x <= largura - 1)
+			passoX = passoX * (-1);
+		
+		if(y >= (canvas.getHeight() - altura) || y <= altura - 1)
+			passoY = passoY * (-1);
+		
+		x = x + passoX;
+		y = y + passoY;
+	}
+
+	@Override
+	public void draw(Canvas canvas) {
+
+		canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.bola), x, y, null);
+	}
+	
+	public void inverteY () {
+		
+		passoY = passoY * (-1);
+	}
+	
+	public void inverteX () {
+		
+		passoX = passoX * (-1);
+	}
+	
+	/*
+	@Override
+	public boolean verficarToque(MotionEvent event) {
+		
+		float aux;
+		boolean aux2 = false, aux3 = false;
+		
+		for(aux = (float) x; aux < (float)(x + largura + 1); aux++){
+			
+			if (xEvent == aux) {
+				
+				aux2 = true;
+				break;
+			} else aux2 = false;
+		}
+		
+		for(aux = (float) y; aux < (float) (y + altura + 1); aux++){
+			
+			if (yEvent == aux) {
+				
+				aux3 = true;
+				break;
+			} else aux3 = false;
+		}
+		
+		if (aux2 == true && aux3 == true) return true;
+		else return false;
+	}
+*/
+
+	@Override
+	public boolean onTouchEvent(MotionEvent event) {
+
+		float xEvent = event.getX();
+		float yEvent = event.getY();
+		
+		float xTop = x;
+		float yTop = y;
+		
+		float xBottom = x + largura;
+		float yBottom = x + altura;
+		
+		if((xEvent >= xTop && xEvent <= xBottom) && (yEvent >= yTop && yEvent <= yBottom)){
+			inverteY();
+			return true;
+		}
+		else return false;
+	}
+
+}

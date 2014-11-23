@@ -1,0 +1,26 @@
+package br.haneysilva.kickball;
+
+import android.graphics.Canvas;
+import android.view.MotionEvent;
+
+public class Quadrado extends GameObject {
+
+	@Override
+	public void step(Canvas canvas) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void draw(Canvas canvas) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public boolean onTouchEvent(MotionEvent event) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

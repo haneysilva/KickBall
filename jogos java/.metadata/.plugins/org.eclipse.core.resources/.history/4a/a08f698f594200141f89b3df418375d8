@@ -1,0 +1,25 @@
+package br.haneysilva.kickball;
+
+import android.graphics.Canvas;
+
+public class KickControler implements GameController{
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void stepObjects(Canvas canvas) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void drawObjects(Canvas canvas) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

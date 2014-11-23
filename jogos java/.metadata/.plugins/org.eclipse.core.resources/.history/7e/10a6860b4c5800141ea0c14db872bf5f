@@ -1,0 +1,40 @@
+package br.haneysilva.kickball;
+
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Rect;
+import android.view.MotionEvent;
+
+public class Quadrado extends GameObject {
+
+	Bitmap image;
+	
+	public Quadrado(Context context) {
+		super(context);
+
+		image = BitmapFactory.decodeResource(getResources(), R.drawable.quadros);
+	}
+
+	@Override
+	public void step(Canvas canvas) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void draw(Canvas canvas) {
+
+		Rect src = new Rect(0, 0, 50, 50);
+		
+		canvas.drawBitmap(image, 50, 50, null);
+	}
+
+	@Override
+	public boolean onTouchEvent(MotionEvent event) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

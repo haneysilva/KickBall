@@ -1,0 +1,19 @@
+package br.haneysilva.kickball;
+
+import android.content.Context;
+import android.graphics.Canvas;
+import android.view.MotionEvent;
+import android.view.View;
+
+public abstract class GameObject extends View {
+
+	protected float altura, largura, x, y;
+	
+	public GameObject(Context context) {
+		super(context);
+	}
+	
+	public abstract void step(Canvas canvas);
+	public abstract void draw(Canvas canvas);
+	public abstract boolean onTouchEvent(MotionEvent event);
+}

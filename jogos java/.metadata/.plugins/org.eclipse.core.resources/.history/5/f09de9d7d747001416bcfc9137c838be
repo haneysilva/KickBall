@@ -1,0 +1,69 @@
+package br.haneysilva.kickball;
+
+import android.content.Context;
+import android.graphics.Canvas;
+import android.view.SurfaceHolder;
+import android.view.SurfaceView;
+
+public class KickController extends GameController {
+
+	/* Objetos do Jogo*/
+	
+	Bola bola;
+	Fundo fundo;
+	
+	private Thread thread;
+	private boolean running = false;
+	private SurfaceHolder holder;
+	
+	public KickController(Context context) {
+		super(context);
+		
+		holder = getHolder();
+		bola = new Bola();
+		fundo = new Fundo();
+	}
+
+	@Override
+	public void stepObjects(Canvas canvas) {
+
+		bola.step(canvas);
+	}
+
+	@Override
+	public void drawObjects(Canvas canvas) {
+
+		fundo.draw(canvas);
+		bola.draw(canvas);		
+	}
+	
+	public void resume() {
+		
+		thread = new Thread(this);
+		thread.start();	
+		running = true;
+	}
+	
+	public void stop () {
+		
+		running = false;
+	}
+
+	@Override
+	public void run() {
+
+		while(running){
+			
+			if(!holder.getSurface().isValid())
+				continue;
+			
+			Canvas canvas = holder.lockCanvas(); 
+			
+			stepObjects(canvas);
+			drawObjects(canvas);
+		
+			holder.unlockCanvasAndPost(canvas);
+		
+		}
+	}	
+}

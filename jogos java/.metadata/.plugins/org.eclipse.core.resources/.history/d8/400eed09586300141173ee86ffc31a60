@@ -1,0 +1,102 @@
+package com.haney.andandonatela1;
+
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Rect;
+
+public class Personagem extends Objeto {
+
+	int linhas = 4, colunas = 3;
+	int largura = 96, altura = 128;
+	int lFrame = 32, aFrame = 32;
+	int fLinha = 0, fColuna =0;
+	int x = 0, y = 0;
+	int passoX = 4, passoY = 4;
+	
+	Bitmap image;
+	
+	public Personagem(Context context) {
+		super(context);
+		
+		image = BitmapFactory.decodeResource(getResources(), R.drawable.bad1);
+	}
+
+	@Override
+	public void step(Canvas canvas) {
+		
+		if (x <= 0 && y <= 0) {
+			
+			x = x + passoX;
+			fLinha = 3;
+		}
+		
+		if ((x >= 0 && (x <= canvas.getWidth() - 32)) && y <=0) {
+			
+			x = x + passoX;
+			fLinha = 3;
+		}
+		
+		if (x >= (canvas.getWidth() - 32) && y <= 0) {
+			
+			y = y + passoY;
+			fLinha = 1;
+		}
+		
+		if (x >= (canvas.getWidth() - 32) && (y >= 0 && y <= (canvas.getHeight() - 32))) {
+			
+			y = y + passoY;
+			fLinha = 1;
+		}
+		
+		if (x >= (canvas.getWidth() - 32) && y >= (canvas.getHeight() - 32))  {
+			
+			x = x - passoX;
+			fLinha = 2;
+		}
+		
+		if ((x <= (canvas.getWidth() - 32) && x >= 0) && y >= (canvas.getHeight() - 32))  {
+			
+			x = x - passoX;
+			fLinha = 2;
+		}
+		
+		if (x <= 0 && y >= (canvas.getHeight() - 32)) {
+			
+			y = y - passoY;
+			fLinha = 4;
+		}
+		
+		if (x <= 0 && (y <= (canvas.getHeight() - 32) && y >= 0)) {
+			
+			y = y - passoY;
+			fLinha = 4;
+		}
+
+		if (fColuna >= 0) fColuna++;
+		if(fColuna >= 3) fColuna--;
+		/*if (flag == 1) fLinha = 3;
+		if (flag == 2) fLinha = 1;
+		if (flag == 3) fLinha = 2;
+		if (flag == 4) fLinha = 4;*/
+	}
+
+	@Override
+	public void draw(Canvas canvas) {
+
+		int top  = fLinha*aFrame;
+		int left = fColuna*lFrame;
+		int bottom = top + aFrame;
+		int right  = left + lFrame;
+
+		Rect src = new Rect(left, top, right, bottom);
+		
+		Rect dst = new Rect(x + 32, x, x + 32, y + 32);
+		
+		canvas.drawBitmap(image, src, dst, null);
+		
+		//canvas.drawBitmap(image, x, y, null);
+	}
+
+}

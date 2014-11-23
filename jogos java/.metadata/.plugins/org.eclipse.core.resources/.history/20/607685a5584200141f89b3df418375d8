@@ -1,0 +1,5 @@
+package br.haneysilva.kickball;
+
+public interface GameController {
+
+}

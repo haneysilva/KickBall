@@ -1,0 +1,52 @@
+package br.haneysilva.kickball;
+
+import android.content.Context;
+import android.graphics.Canvas;
+import android.view.SurfaceView;
+
+public class KickController extends SurfaceView implements GameController{
+
+	public KickController(Context context) {
+		super(context);
+		// TODO Auto-generated constructor stub
+	}
+
+	private Thread thread;
+	private boolean running = false;
+	private 
+	
+	@Override
+	public void run() {
+
+		while(running){
+			
+									
+		}
+
+	}
+
+	@Override
+	public void stepObjects(Canvas canvas) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void drawObjects(Canvas canvas) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public void resume() {
+		
+		thread = new Thread(this);
+		thread.start();	
+		running = true;
+	}
+	
+	public void stop () {
+		
+		running = false;
+	}
+
+}

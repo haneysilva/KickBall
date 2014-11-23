@@ -1,0 +1,34 @@
+package br.haneysilva.kickball;
+
+import android.content.Context;
+import android.graphics.Canvas;
+
+public class KickController extends GameController {
+
+	/* Objetos do Jogo*/
+	
+	Bola bola;
+	Fundo fundo;
+	
+	public KickController(Context context) {
+		super(context);
+	
+		bola = new Bola(Context);
+		fundo = new Fundo();
+	}
+
+	@Override
+	public void stepObjects(Canvas canvas) {
+
+		bola.step(canvas);
+	}
+
+	@Override
+	public void drawObjects(Canvas canvas) {
+
+		fundo.draw(canvas);
+		bola.draw(canvas);		
+	}
+	
+		
+}

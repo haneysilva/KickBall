@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="br.haneysilva.kickball.KickControler"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="android.view.SurfaceHolder"/>
+<fullyQualifiedTypeName name="android.graphics.Paint"/>
+<fullyQualifiedTypeName name="br.haneysilva.kickball.Fundo"/>
+<fullyQualifiedTypeName name="br.haneysilva.kickball.R.id"/>
+<fullyQualifiedTypeName name="android.view.MotionEvent"/>
+<fullyQualifiedTypeName name="android.R.integer"/>
+<fullyQualifiedTypeName name="br.haneysilva.kickball.R.drawable"/>
+<fullyQualifiedTypeName name="br.haneysilva.kickball.Quadrado"/>
+<fullyQualifiedTypeName name="android.view.SurfaceView"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="android.view.View"/>
+<fullyQualifiedTypeName name="com.haney.andandonatela.Fundo"/>
+<fullyQualifiedTypeName name="com.haney.andandonatela.Personagem"/>
+<fullyQualifiedTypeName name="com.haney.andandonatela.R.drawable"/>
+<fullyQualifiedTypeName name="android.R.color"/>
+<fullyQualifiedTypeName name="com.haney.andandonatela.Controlador"/>
+<fullyQualifiedTypeName name="com.haney.andandonatela.ControladorDePosicao"/>
+<fullyQualifiedTypeName name="android.graphics.BitmapFactory"/>
+<fullyQualifiedTypeName name="br.haneysilva.kickball.KickController"/>
+<fullyQualifiedTypeName name="br.haneysilva.kickball.Bola"/>
+<fullyQualifiedTypeName name="android.graphics.Color"/>
+<fullyQualifiedTypeName name="android.graphics.Bitmap"/>
+<fullyQualifiedTypeName name="br.haneysilva.kickball.GameObject"/>
+<fullyQualifiedTypeName name="br.haneysilva.kickball.Colisao"/>
+<fullyQualifiedTypeName name="android.graphics.Rect"/>
+<fullyQualifiedTypeName name="android.graphics.Canvas"/>
+</qualifiedTypeNameHistroy>

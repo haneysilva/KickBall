@@ -1,0 +1,73 @@
+package br.haneysilva.kickball;
+
+import android.R.integer;
+import android.content.Context;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.view.MotionEvent;
+
+public class Bola extends GameObject {
+
+	Paint paint = new Paint();
+	
+	private int passoX = 4, passoY = 4;
+	
+	public Bola(Context context, int x, int y) {
+		super(context);
+		
+		altura = image;
+		largura = 31;
+		this.x = x;
+		this.y = y;
+	}
+
+	@Override
+	public void step(Canvas canvas) {
+
+		if(x >= (canvas.getWidth() - largura) || x <= 1)
+			passoX = passoX * (-1);
+		
+		if(y >= (canvas.getHeight() - altura) || y <= 1)
+			passoY = passoY * (-1);
+		
+		x = x + passoX;
+		y = y + passoY;
+	}
+
+	@Override
+	public void draw(Canvas canvas) {
+
+		canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.bola), x, y, null);
+	}
+	
+	public void inverteY () {
+		
+		passoY = passoY * (-1);
+	}
+	
+	public void inverteX () {
+		
+		passoX = passoX * (-1);
+	}
+
+	@Override
+	public boolean onTouchEvent(MotionEvent event) {
+
+		float xEvent = event.getX();
+		float yEvent = event.getY();
+		
+		float xTop = x;
+		float yTop = y;
+		
+		float xBottom = x + largura;
+		float yBottom = x + altura;
+		
+		if((xEvent >= xTop && xEvent <= xBottom) && (yEvent >= yTop && yEvent <= yBottom)){
+			
+			inverteY();
+			return true;
+		} else return false;
+	}
+
+}

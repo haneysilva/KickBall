@@ -1,0 +1,20 @@
+package br.haneysilva.kickball;
+
+import android.graphics.Canvas;
+import android.graphics.Color;
+
+public class Fundo extends GameObject {
+
+	@Override
+	public void step(Canvas canvas) {
+		// NULL
+	}
+
+	@Override
+	public void draw(Canvas canvas) {
+		
+		canvas.drawColor(Color.BLACK);
+		
+	}
+
+}

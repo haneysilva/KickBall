@@ -1,0 +1,19 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="br.haneysilva.kickball.GameController"><rhs name\="br.haneysilva.kickball.KickController"/></lhs><lhs name\="java.lang.Runnable"><rhs name\="br.haneysilva.kickball.KickController"/><rhs name\="java.lang.Thread"/><rhs name\="com.haney.andandonatela.ControladorDePosicao"/></lhs><lhs name\="android.view.SurfaceView"><rhs name\="br.haneysilva.kickball.KickController"/><rhs name\="com.haney.andandonatela.ControladorDePosicao"/></lhs><lhs name\="android.view.View"><rhs name\="br.haneysilva.kickball.KickController"/><rhs name\="br.haneysilva.kickball.Quadrado"/><rhs name\="com.haney.andandonatela.Fundo"/><rhs name\="com.haney.andandonatela.Personagem"/><rhs name\="com.haney.andandonatela.ControladorDePosicao"/></lhs><lhs name\="android.graphics.drawable.Drawable$Callback"><rhs name\="br.haneysilva.kickball.KickController"/><rhs name\="br.haneysilva.kickball.Quadrado"/><rhs name\="com.haney.andandonatela.Fundo"/><rhs name\="com.haney.andandonatela.Personagem"/><rhs name\="com.haney.andandonatela.ControladorDePosicao"/></lhs><lhs name\="android.view.KeyEvent$Callback"><rhs name\="br.haneysilva.kickball.KickController"/><rhs name\="br.haneysilva.kickball.Quadrado"/><rhs name\="com.haney.andandonatela.Fundo"/><rhs name\="com.haney.andandonatela.Personagem"/><rhs name\="com.haney.andandonatela.ControladorDePosicao"/></lhs><lhs name\="android.view.accessibility.AccessibilityEventSource"><rhs name\="br.haneysilva.kickball.KickController"/><rhs name\="br.haneysilva.kickball.Quadrado"/><rhs name\="com.haney.andandonatela.Fundo"/><rhs name\="com.haney.andandonatela.Personagem"/><rhs name\="com.haney.andandonatela.ControladorDePosicao"/></lhs><lhs name\="br.haneysilva.kickball.KickController"><rhs name\="br.haneysilva.kickball.KickController"/></lhs><lhs name\="java.lang.Thread"><rhs name\="java.lang.Thread"/></lhs><lhs name\="br.haneysilva.kickball.GameObject"><rhs name\="br.haneysilva.kickball.Bola"/><rhs name\="br.haneysilva.kickball.Fundo"/><rhs name\="br.haneysilva.kickball.Quadrado"/></lhs><lhs name\="br.haneysilva.kickball.Bola"><rhs name\="br.haneysilva.kickball.Bola"/></lhs><lhs name\="br.haneysilva.kickball.Fundo"><rhs name\="br.haneysilva.kickball.Fundo"/></lhs><lhs name\="br.haneysilva.kickball.Quadrado"><rhs name\="br.haneysilva.kickball.Quadrado"/></lhs><lhs name\="android.os.Parcelable"><rhs name\="android.graphics.Rect"/></lhs><lhs name\="com.haney.andandonatela.Objeto"><rhs name\="com.haney.andandonatela.Fundo"/><rhs name\="com.haney.andandonatela.Personagem"/></lhs><lhs name\="com.haney.andandonatela.Fundo"><rhs name\="com.haney.andandonatela.Fundo"/></lhs><lhs name\="com.haney.andandonatela.Personagem"><rhs name\="com.haney.andandonatela.Personagem"/></lhs><lhs name\="com.haney.andandonatela.Controlador"><rhs name\="com.haney.andandonatela.ControladorDePosicao"/></lhs><lhs name\="com.haney.andandonatela.ControladorDePosicao"><rhs name\="com.haney.andandonatela.ControladorDePosicao"/></lhs></history>
+content_assist_number_of_computers=12
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+fontPropagated=true
+org.eclipse.jdt.ui.editor.tab.width=
+org.eclipse.jdt.ui.formatterprofiles.version=12
+org.eclipse.jdt.ui.javadoclocations.migrated=true
+org.eclipse.jdt.ui.text.code_templates_migrated=true
+org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.templates_migrated=true
+org.eclipse.jface.textfont=1|Consolas|10.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Consolas;
+proposalOrderMigrated=true
+spelling_locale_initialized=true
+tabWidthPropagated=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

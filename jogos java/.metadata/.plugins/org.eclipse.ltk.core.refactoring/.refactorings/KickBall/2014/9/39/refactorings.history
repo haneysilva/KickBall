@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;br.haneysilva.kickball.KickControler&apos; to &apos;KickController&apos;&#x0D;&#x0A;- Original project: &apos;KickBall&apos;&#x0D;&#x0A;- Original element: &apos;br.haneysilva.kickball.KickControler&apos;&#x0D;&#x0A;- Renamed element: &apos;br.haneysilva.kickball.KickController&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;KickControler&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;br.haneysilva.kickball{KickControler.java[KickControler" matchStrategy="1" name="KickController" qualified="false" references="true" similarDeclarations="false" stamp="1411391686345" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,19 @@
+package br.haneysilva.kickball;
+
+import android.graphics.Canvas;
+
+public class Bola extends GameObject {
+
+	@Override
+	public void step(Canvas canvas) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void draw(Canvas canvas) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

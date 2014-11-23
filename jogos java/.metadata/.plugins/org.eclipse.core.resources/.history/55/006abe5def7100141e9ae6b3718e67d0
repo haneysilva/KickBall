@@ -1,0 +1,9 @@
+package br.haneysilva.kickball;
+
+public class Colisao {
+
+	public Colisao() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

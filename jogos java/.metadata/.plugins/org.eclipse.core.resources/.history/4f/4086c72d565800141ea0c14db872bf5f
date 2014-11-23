@@ -1,0 +1,45 @@
+package br.haneysilva.kickball;
+
+import android.content.Context;
+import android.graphics.Canvas;
+import android.view.MotionEvent;
+
+public class KickController extends GameController {
+
+	/* Objetos do Jogo*/
+	
+	Bola bola;
+	Fundo fundo;
+	Quadrado quadrado;
+	
+	public KickController(Context context) {
+		super(context);
+	
+		bola = new Bola(context);
+		fundo = new Fundo(context);
+		quadrado = new Quadrado(context);
+	}
+
+	@Override
+	public void stepObjects(Canvas canvas) {
+
+		bola.step(canvas);
+	}
+
+	@Override
+	public void drawObjects(Canvas canvas) {
+
+		fundo.draw(canvas);
+		quadrado.draw(canvas);
+		bola.draw(canvas);
+	}
+
+	
+	public boolean onTouchEvent(MotionEvent event) {
+	
+		bola.onTouchEvent(event);
+		return super.onTouchEvent(event);
+	}
+
+		
+}
