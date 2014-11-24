@@ -6,8 +6,6 @@ public class Colisao {
 		
 	}
 	
-	//esse não está dando certo
-	
 	public static boolean verificarColisao (Bola bola, Bola bola2) {
 		
 		float xB1 = bola.getPosicaoX();

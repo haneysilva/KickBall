@@ -16,7 +16,7 @@ public class KickController extends GameController {
 		super(context);
 	
 		bola = new Bola(context, 5, 5);
-		bola2 = new Bola(context, 500, 500);
+		bola2 = new Bola(context, 100, 100);
 		bola2.inverteX();
 		bola2.inverteY();
 		fundo = new Fundo(context);
@@ -29,10 +29,8 @@ public class KickController extends GameController {
 		bola.step(canvas);
 		bola2.step(canvas);	
 		
-		boolean teste = Colisao.verificarColisao(bola, bola2);
-		
 		//verifica-se a colisao aqui
-		if (teste == true) {
+		if (Colisao.verificarColisao(bola, bola2)) {
 			bola.inverteX();
 			bola2.inverteX();
 		}
